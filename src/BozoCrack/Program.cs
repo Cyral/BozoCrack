@@ -204,13 +204,18 @@ namespace BozoCrack
             //Search the web for the hash, and split all of the results by spaces and a few other characters
             foreach (string searchUrl in websites)
             {
-                string url = stringBuilder.Clear().Append(searchUrl).Append(hash).ToString(); //Create url
-                string response = Encoding.UTF8.GetString(webClient.DownloadData(url)); //Send query
-                string[] wordlist = response.Split(splitChars, StringSplitOptions.RemoveEmptyEntries); //Split response
+                try {
+                    string url = stringBuilder.Clear().Append(searchUrl).Append(hash).ToString(); //Create url
+                    string response = Encoding.UTF8.GetString(webClient.DownloadData(url)); //Send query
+                    string[] wordlist = response.Split(splitChars, StringSplitOptions.RemoveEmptyEntries); //Split response
 
-                string answer = DictionaryAttack(hash, wordlist);
-                if (!string.IsNullOrWhiteSpace(answer)) //If result is not null, return the password/original string found
-                    return answer;
+                    string answer = DictionaryAttack(hash, wordlist);
+                    if (!string.IsNullOrWhiteSpace(answer)) //If result is not null, return the password/original string found
+                        return answer;
+                }
+                catch (WebException e) { //Catch 404, 503, etc errors
+                    Console.WriteLine("Exception: {0}", e.Message);
+                }
             }
             return string.Empty;
         }
