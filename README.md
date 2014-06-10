@@ -5,6 +5,9 @@ BozoCrack is a depressingly effective MD5 password hash cracker with almost zero
 
 Just as the origininal Ruby version, it works way better than it should, and shows how something so simple can find your passwords.
 
+## Files
+Quite a lot more than the original, due to the VS solution structure. If you would like to modify this program, the entirety of the code is contained within `src/BozoCrack/Program.cs`
+
 ## How?
 Command Line Usage:
 
