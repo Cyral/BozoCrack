@@ -1,4 +1,4 @@
-# BozoCrack C#
+# BozoCrack (C# Port)
 This is a C# port of [BozoCrack](https://github.com/juuso/BozoCrack)
 
 BozoCrack is a depressingly effective MD5 password hash cracker with almost zero CPU/GPU load. Instead of rainbow tables, dictionaries, or brute force, BozoCrack simply *finds* the plaintext password. Specifically, it googles the MD5 hash and hopes the plaintext appears somewhere on the first page of results. It finds a list of words by splitting the results by spaces, slashes, colons, and HTML tags. It then tests each of these words to see if the resulting MD5 hash is equal to the input.
