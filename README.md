@@ -37,7 +37,7 @@ Or, run the exe and follow the prompts.
 
 The input file has no specified format. BozoCrack automatically picks up strings that look like MD5 hashes. However, a single line cannot contain more than 1 hash, but it can be surrounded by other strings.
 
-Example with output:
+File Example with output:
 
 	>BozoCrack.exe C:\MD5_list.txt
 
@@ -48,10 +48,12 @@ Example with output:
 	d0763edaa9d9bd2a9516280e9044d885:monkey
 	dfd8c10c1b9b58c8bf102225ae3be9eb:12081977
 	ede6b50e7b5826fe48fc1f0fe772c48f:1q2w3e4r5t6y
+	
+Hash Example with output:
 
-	Finished.
-	Press any key to exit...
+	>BozoCrack.exe bed128365216c019988915ed3add75fb
 
+	bed128365216c019988915ed3add75fb:passw0rd
 
 ## Why?
 The original version by [juuso](https://github.com/juuso) and others was created to show just how bad an idea it is to use plain MD5 as a password hashing mechanism. Honestly, if the passwords can be cracked with *this software*, there are no excuses.
