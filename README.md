@@ -5,8 +5,18 @@ BozoCrack is a depressingly effective MD5 password hash cracker with almost zero
 
 Just as the origininal Ruby version, it works way better than it should, and shows how something so simple can find your passwords.
 
+## Differences
+My version, besides being in C#, supports a few differences:
+    -Ability to launch from command line and stand-alone .exe
+    -Ability to save results in `results.txt`
+    -Ability to edit search websites (`www.md5-hash.com` by default, google is also effective)
+    -Constant loop, you may type 'exit' to exit the program, otherwise you can run it multiple times without reopening
+    -Probably a few other differences, try try it out :)
+
 ## Files
 Quite a lot more than the original, due to the VS solution structure. If you would like to modify this program, the entirety of the code is contained within `src/BozoCrack/Program.cs`
+
+The program will generate `search.txt` and `results.txt` in it's directory, one for a list of websites to use to look for results, and the other to store the results in. (Output is generated in console as well)
 
 ## How?
 Command Line Usage:
