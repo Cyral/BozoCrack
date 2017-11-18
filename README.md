@@ -5,8 +5,8 @@ BozoCrack is a depressingly effective MD5 password hash cracker with almost zero
 
 Just as the origininal Ruby version, it works way better than it should, and shows how something so simple can find your passwords.
 
-[Screenshot](https://i.imgur.com/cbezDCq.png)
-tr
+![Screenshot](https://i.imgur.com/cbezDCq.png)
+
 ## Differences
 My version, besides being in C#, supports a few differences:
 
